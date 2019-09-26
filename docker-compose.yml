@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  ef_postgres_db:
+    container_name: ef_postgres_db_c
+    image: postgres:10.5
+    volumes:
+      - "/var/eftest/postgres/data:/var/lib/postgresql/data"
+    environment:
+      - POSTGRES_USER=${Database_User}
+      - POSTGRES_PASSWORD=${Database_Password}
+    ports:
+      - "6530:5432"
+
+  ef_mysql_db:
+    container_name: ef_mysql_db_c
+    image: mysql:8.0.15
+    volumes:
+      - "/var/eftest/mysql/data:/var/lib/mysql"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${Database_Password}
+      - MYSQL_USER=${Database_User}
+      - MYSQL_PASSWORD=${Database_Password}
+    ports:
+      - "6531:3306"
+      
+  ef_sqlserver_db:
+    container_name: ef_sqlserver_db_c
+    image: mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+    environment:
+      - SA_PASSWORD=${Database_Password}
+      - MYSQL_USER=${Database_User}
+      - MYSQL_PASSWORD=${Database_User}
+    ports:
+      - "6532:1433"

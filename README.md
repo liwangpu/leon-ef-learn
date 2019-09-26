@@ -1,2 +1,2 @@
 # leon-ef-learn
-for learning
+for learn
