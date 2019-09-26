@@ -3,7 +3,8 @@ using Npgsql;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace EF_Console
+
+namespace EF_Console.Libraries
 {
     class AppDbDapperConnectionFactory
     {

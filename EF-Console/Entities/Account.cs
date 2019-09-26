@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace EF_Console.Entities
 {
@@ -13,15 +12,11 @@ namespace EF_Console.Entities
         public string OrganizationId { get; protected set; }
         public Organization Organization { get; protected set; }
 
-        public List<AccountTag> OwnAccountTags { get; protected set; }
-
-        //public AccountType AccountType { get; protected set; }
-        //protected int _AccountTypeId;
 
         #region ctor
         protected Account()
         {
-            OwnAccountTags = new List<AccountTag>();
+
         }
 
         public Account(string name)
@@ -38,12 +33,5 @@ namespace EF_Console.Entities
             Description = description;
         }
 
-        public void AddTag(Tag tag)
-        {
-            var at = new AccountTag();
-            at.Account = this;
-            at.Tag = tag;
-            OwnAccountTags.Add(at);
-        }
     }
 }

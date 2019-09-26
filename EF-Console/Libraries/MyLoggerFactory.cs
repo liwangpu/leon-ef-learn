@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 
-namespace EF_Console
+namespace EF_Console.Libraries
 {
     public class MyLoggerFactory : ILoggerFactory
     {

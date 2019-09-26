@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -9,18 +9,6 @@
   <ItemGroup>
     <Compile Remove="AccountEntityTypeConfiguration.cs" />
     <Compile Remove="Accounts.cs" />
-    <Compile Remove="Migrations\20190405132104_t1.cs" />
-    <Compile Remove="Migrations\20190405132335_t1.cs" />
-    <Compile Remove="Migrations\20190405143003_t1.cs" />
-    <Compile Remove="Migrations\20190405143228_t1.cs" />
-    <Compile Remove="Migrations\20190405145029_t1.cs" />
-    <Compile Remove="Migrations\20190405151520_t1.cs" />
-    <Compile Remove="Migrations\20190405153837_t1.cs" />
-    <Compile Remove="Migrations\20190405155228_t1.cs" />
-    <Compile Remove="Migrations\20190405160729_t1.cs" />
-    <Compile Remove="Migrations\20190405160754_t1.cs" />
-    <Compile Remove="Migrations\20190405161616_t1.cs" />
-    <Compile Remove="Migrations\20190405170237_t1.cs" />
     <Compile Remove="MyDatabase.cs" />
   </ItemGroup>
 

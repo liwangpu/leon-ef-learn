@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace EF_Console
+namespace EF_Console.Libraries
 {
     public static class StringExtension
     {

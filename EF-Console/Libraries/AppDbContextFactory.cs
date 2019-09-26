@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Design;
 
-namespace EF_Console
+namespace EF_Console.Libraries
 {
     class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {

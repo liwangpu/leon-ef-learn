@@ -1,10 +1,11 @@
 ﻿using EF_Console.EntityConfigurations;
 using Microsoft.EntityFrameworkCore;
 
-namespace EF_Console
+namespace EF_Console.Libraries
 {
     class AppDbContext : DbContext
     {
+        public const string DEFAULT_SCHEMA = "learn";
         public DatabaseSetting Setting { get; protected set; }
         public string ConnectionString { get; protected set; }
 
@@ -44,10 +45,10 @@ namespace EF_Console
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("learning");
+            modelBuilder.HasDefaultSchema(DEFAULT_SCHEMA);
             modelBuilder.ApplyConfiguration(new AccountEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new OrganizationEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new AccountTagEntityTypeConfiguration());
+
 
 
             foreach (var entity in modelBuilder.Model.GetEntityTypes())

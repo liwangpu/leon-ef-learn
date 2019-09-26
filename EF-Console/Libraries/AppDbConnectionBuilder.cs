@@ -1,4 +1,4 @@
-﻿namespace EF_Console
+﻿namespace EF_Console.Libraries
 {
     class AppDbConnectionBuilder
     {
